@@ -141,6 +141,7 @@ class DatatransController extends Controller
     public function pay(Request $request)
     {
         try {
+            dd('welcome');
             $datatransurl = "https://api.sandbox.datatrans.com/v1/transactions/";
             $url = $datatransurl . 'v1/transactions/' . request('transactionId') . '/settle';
             $total_amount = request('price');
